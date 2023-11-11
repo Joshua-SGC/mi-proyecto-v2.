@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Proyecto DARK DECEPTION</title>
+</head>
+<body>
+
+    <header>
+        <section id="logo">
+            <img src="img/imgLOGO.webp" alt="logo" >
+        </section>
+        <section id="menu">
+            <ul>
+                <a href="#">Introducción</a>
+                <a href="#">Contexto</a>
+                <a href="#">Personajes</a>
+                <a href="#">Contacto</a>
+            </ul>
+        </section>
+    </header>
+
+    <section id="intro">
+        <div id="personaje">
+            <img src="img/Bierce.webp" alt="bierce">
+        </div>
+        <div class="intro-info">
+            <h2>Aquí es donde las pesadillas empiezan</h2>
+            <p class="texto-info"> Dark Deception es un juego de terror en primera persona que te desafía a escapar de tus peores pesadillas. Debes recoger fragmentos de cristal  mientras evitas a los enemigos que te persiguen por los laberintos. Cada nivel tiene un tema diferente, como un hotel embrujado, una escuela abandonada o un hospital infernal. Además, cada nivel tiene un jefe final que te pondrá a prueba con sus habilidades especiales.
+                <br><br>
+                El juego tiene un estilo arcade, con una puntuación basada en el tiempo, los fragmentos recogidos y los enemigos eliminados. También tiene un sistema de mejora que te permite desbloquear poderes y habilidades para enfrentarte a los desafíos. El juego tiene un total de 5 capítulos, de los cuales 4 están disponibles actualmente. El juego tiene una historia que se va revelando a medida que avanzas, con personajes misteriosos como Bierce, Malak y el mono asesino.</p>
+        </div>
+    </section>
+    <section id="info">
+        <article>
+            <h4>Historia</h4>
+            <p>El juego gira en torno a Doug Houser , que se encuentra en un salón de baile . Allí, una mujer llamada Bierce los saluda y les explica que si quieren regresar al mundo de los vivos, tendrán que soportar muchas pruebas agotadoras. Con eso, les presenta varios portales en los que el jugador necesita recolectar una cantidad de Soul Shards , los restos de almas humanas, y luego finalmente pueden regresar al mundo de los vivos. Desafortunadamente, este desafío no será fácil, ya que los fragmentos están custodiados por extraños monstruos y su maestro, Malak , quien no se detendrá ante nada para impedir que el protagonista tenga éxito.</p>
+
+        </article>
+        <!-----------------------CARRUSEL----------------------------->
+        <section id="espacio-carrusel">
+            <h2>MONSTRUOS</h2>
+        <div id="carrusel">
+            <ul class="slider" id="slider">
+                <li id="pag-1">
+                    <img src="img/clown.webp" alt="" style="width: 200px;">
+                    <p>THE CLOWN</p>
+                </li>
+                <li id="pag-2">U</li>
+                <li id="pag-3">T</li>
+            </ul>
+          
+            <button class="boton izquierda" onclick="moverIzquierda()">←</button>
+            <button class="boton derecha" onclick="moverDerecha()">→</button>
+          </div>
+          </section>
+          <script>
+          var indice = 0;
+          var slider = document.getElementById('slider');
+          var elementos = slider.children;
+          
+          function moverIzquierda() {
+            if (indice > 0) {
+              indice--;
+              actualizarCarrusel();
+            }
+          }
+          
+          function moverDerecha() {
+            if (indice < elementos.length - 1) {
+              indice++;
+              actualizarCarrusel();
+            }
+          }
+          
+          function actualizarCarrusel() {
+            for (var i = 0; i < elementos.length; i++) {
+              elementos[i].style.transform = 'translateX(' + (-100 * indice) + '%)';
+            }
+          }
+          </script>
+        <!------------------------------------------------------>
+    </section>
+    <footer>
+        footer
+        <aside id="foot-izq">
+            <div>
+                datos
+            </div>
+        </aside>
+        <aside id="foot-der">
+            <div>
+                redes
+            </div>
+        </aside>
+    </footer>
+    
+</body>
+</html>
